@@ -19,13 +19,14 @@ export default function CircleButton({
       {...props}
       className={clsx(
         'rounded-full duration-200 cursor-pointer text-white truncate',
-        backgroundImage ? 'transition-all hover:brightness-10 filter' : 'transition-colors bg-secondary hover:bg-secondary-600',
+        backgroundImage ? 'transition-all hover:brightness-90 filter' : 'transition-colors bg-secondary hover:bg-secondary-600',
         size === 'sm' ? 'w-10 h-10 text-xl' : 'w-15 h-15 text-2xl',
         props.className,
       )}
       style={backgroundImage ? {
         backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
       } : {}}
     >
