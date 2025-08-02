@@ -22,9 +22,9 @@ export default function FilledButton({
         {
           'rounded-full': rounded,
           'rounded': !rounded,
-          'bg-primary-500 hover:bg-primary-600': color === 'primary',
-          'bg-secondary-500 hover:bg-secondary-600': color === 'secondary',
-          'bg-tertiary-500 hover:bg-tertiary-600': color === 'tertiary',
+          'bg-primary hover:bg-primary-600': color === 'primary',
+          'bg-secondary hover:bg-secondary-600': color === 'secondary',
+          'bg-tertiary hover:bg-tertiary-600': color === 'tertiary',
         },
         props.className,
       )}

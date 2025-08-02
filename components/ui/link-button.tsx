@@ -18,9 +18,9 @@ export default function LinkButton({
       className={clsx(
         'p-1 transition-colors duration-200 text-sm flex items-center cursor-pointer',
         {
-          'text-primary-500 hover:text-primary-600': color === 'primary',
-          'text-secondary-500 hover:text-secondary-600': color === 'secondary',
-          'text-tertiary-500 hover:text-tertiary-600': color === 'tertiary',
+          'text-primary hover:text-primary-600': color === 'primary',
+          'text-secondary hover:text-secondary-600': color === 'secondary',
+          'text-tertiary hover:text-tertiary-600': color === 'tertiary',
         },
       )}
       href={href}
