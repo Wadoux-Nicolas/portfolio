@@ -1,5 +1,5 @@
-import FilledButton from '@/components/ui/filled-button';
-import CircleButton from '@/components/ui/circle-button';
+import FilledButton from '@/components/atoms/filled-button';
+import CircleButton from '@/components/atoms/circle-button';
 
 export default function Home() {
   return (
