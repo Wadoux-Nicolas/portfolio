@@ -1,0 +1,36 @@
+import React, { ComponentPropsWithoutRef, PropsWithChildren } from 'react';
+import clsx from 'clsx';
+import Link from 'next/link';
+import { ChevronRightIcon } from '@heroicons/react/16/solid';
+
+type LinkButtonProps =
+  PropsWithChildren<ComponentPropsWithoutRef<typeof Link>> &
+  {
+    className?: string;
+    color?: 'primary' | 'secondary' | 'tertiary';
+  };
+
+export default function LinkButton({
+  children,
+  className,
+  color = 'primary',
+  ...props
+}: LinkButtonProps) {
+  return (
+    <Link
+      className={clsx(
+        'p-1 transition-colors duration-200 text-sm flex items-center cursor-pointer',
+        {
+          'text-primary hover:text-primary-600': color === 'primary',
+          'text-secondary hover:text-secondary-600': color === 'secondary',
+          'text-tertiary hover:text-tertiary-600': color === 'tertiary',
+        },
+        className,
+      )}
+      {...props}
+    >
+      {children}
+      <ChevronRightIcon className={'w-5'}/>
+    </Link>
+  );
+}
