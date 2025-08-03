@@ -28,7 +28,8 @@ export default function CircleButton({
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-      } : {}}
+        ...props.style,
+      } : props.style}
     >
       {children}
     </button>
