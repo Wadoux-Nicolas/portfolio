@@ -1,22 +1,23 @@
-import React from 'react';
+import React, { ComponentPropsWithoutRef, PropsWithChildren } from 'react';
 import clsx from 'clsx';
+
+type FilledButtonProps =
+  PropsWithChildren<ComponentPropsWithoutRef<'button'>> &
+  {
+    rounded?: boolean,
+    color?: 'primary' | 'secondary' | 'tertiary',
+  };
 
 export default function FilledButton({
   children,
   rounded = false,
   color = 'primary',
-  props = {
-    type: 'button',
-  },
-}: {
-  children: React.ReactNode,
-  rounded?: boolean,
-  color?: 'primary' | 'secondary' | 'tertiary',
-  props?: React.ButtonHTMLAttributes<HTMLButtonElement>,
-}) {
+  ...props
+}: FilledButtonProps) {
   return (
     <button
       {...props}
+      type={props.type || 'button'}
       className={clsx(
         'py-2 px-8 text-white transition-colors duration-200 cursor-pointer',
         {

@@ -1,21 +1,37 @@
-import React from 'react';
+import React, { ComponentPropsWithoutRef, ElementType, PropsWithChildren } from 'react';
 import clsx from 'clsx';
 
-export default function CircleButton({
+const defaultComponentElement = 'button';
+type defaultComponentElementType = typeof defaultComponentElement;
+
+// Generic definition of props based on a component type passed by 'as' prop
+// - ref isn't forwarded for now, so we use ComponentPropsWithoutRef
+type CircleButtonPropsFromType<ComponentType extends ElementType> = PropsWithChildren<
+  ComponentPropsWithoutRef<ComponentType> &
+  {
+    as?: ComponentType;
+  }
+>;
+
+// CircleButtonProps type that extends the generic props and adds specific properties
+type CircleButtonProps<ComponentType extends ElementType = defaultComponentElementType> =
+  CircleButtonPropsFromType<ComponentType> & {
+  size?: 'sm' | 'md';
+  backgroundImage?: string;
+};
+
+export default function CircleButton<ComponentType extends ElementType = defaultComponentElementType>({
   children,
+  as,
   size = 'md',
   backgroundImage,
-  props = {
-    type: 'button',
-  },
-}: {
-  children?: React.ReactNode,
-  size?: 'sm' | 'md',
-  backgroundImage?: string,
-  props?: React.ButtonHTMLAttributes<HTMLButtonElement>,
-}) {
+  ...props
+}: CircleButtonProps<ComponentType>) {
+
+  const Component = as || defaultComponentElement;
+
   return (
-    <button
+    <Component
       {...props}
       className={clsx(
         'rounded-full duration-200 cursor-pointer text-white truncate',
@@ -32,6 +48,6 @@ export default function CircleButton({
       } : props.style}
     >
       {children}
-    </button>
+    </Component>
   );
 }
