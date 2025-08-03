@@ -1,9 +1,9 @@
-import ContactMeAndSocials from '@/components/organisms/contact-me-and-socials';
+import Welcome from '@/components/templates/welcome';
 
 export default function Home() {
   return (
-    <div>
-      <ContactMeAndSocials/>
-    </div>
+    <main>
+      <Welcome/>
+    </main>
   );
 }
