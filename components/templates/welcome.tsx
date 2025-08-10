@@ -1,51 +1,38 @@
 import ContactMeAndSocials from '@/components/organisms/contact-me-and-socials';
-import Image from 'next/image';
+import WelcomeBlobsBackground from '@/components/organisms/welcome-blobs-background';
 
 export default function Welcome() {
   return (
-    <div className="relative w-screen h-screen overflow-hidden">
-      {/* Blobs on right */}
-      <Image
-        src="/blobs/blob-1.svg"
-        alt=""
-        width={426}
-        height={1018}
-        className="absolute top-0 right-0 bottom-0 h-full w-1/3 object-cover object-left"
-      />
+    <section aria-label="Accueil"
+             className="relative w-screen h-screen overflow-hidden flex items-center justify-center">
+      
+      <div className="-z-1">
+        <WelcomeBlobsBackground/>
+      </div>
 
-      {/* Blobs on left */}
-      <Image
-        src="/blobs/blob-5.svg"
-        alt=""
-        width={237}
-        height={224}
-        className="absolute top-0 left-0 size-1/5 object-cover object-bottom-right"
-      />
+      <div className="flex w-full justify-evenly">
+        <div>
+          <p className="text-secondary text-3xl">
+            Bonjour ! Je suis
+          </p>
 
-      {/* Blobs on bottom */}
-      <Image
-        src="/blobs/blob-3.svg"
-        alt=""
-        width={1440}
-        height={140}
-        className="absolute bottom-0 left-0 w-full h-auto object-cover"
-      />
-      <Image
-        src="/blobs/blob-4.svg"
-        alt=""
-        width={1440}
-        height={198}
-        className="absolute bottom-0 left-0 w-full h-auto object-cover"
-      />
-      <Image
-        src="/blobs/blob-2.svg"
-        alt=""
-        width={1440}
-        height={131}
-        className="absolute bottom-0 left-0 w-full h-auto object-cover"
-      />
+          <div className="w-fit relative py-6 my-6">
+            <div className="absolute top-0 left-0 h-1 bg-primary w-1/2 rounded"></div>
 
-      <ContactMeAndSocials/>
-    </div>
+            <h1 className="text-tertiary text-3xl">
+              <span className="text-primary text-6xl">Nicolas Wadoux,</span>
+              <br/>
+              <span className="ml-16">Développeur</span> <span
+              className="text-secondary text-5xl">Fullstack Web</span> et <span
+              className="text-secondary text-5xl">Mobile</span>
+            </h1>
+
+            <div className="absolute bottom-0 right-0 h-1 bg-primary w-1/2 rounded"></div>
+          </div>
+        </div>
+
+        <ContactMeAndSocials/>
+      </div>
+    </section>
   );
 }
