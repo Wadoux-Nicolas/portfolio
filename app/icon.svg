@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img"
+     aria-label="Logo NW vectoriel">
+    <title>Logo NW vectoriel</title>
+    <defs>
+        <style>
+            .border { fill: none; stroke: #2f6a50; stroke-width: 12; }
+            .stroke { fill: none; stroke: #2f6a50; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+        </style>
+    </defs>
+
+    <rect x="12" y="12" width="216" height="216" rx="34" ry="34" class="border"/>
+
+    <path class="stroke" d="
+    M 60 160
+    L 60 80
+    L 105 160
+    L 105 80
+    L 130 160
+    L 150 80
+    L 170 160
+    M 190 80
+    L 170 160
+  "/>
+</svg>
