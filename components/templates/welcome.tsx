@@ -1,11 +1,12 @@
 import ContactMeAndSocials from '@/components/organisms/contact-me-and-socials';
 import WelcomeBlobsBackground from '@/components/organisms/welcome-blobs-background';
+import ScrollIndicator from '@/components/atoms/scroll-indicator';
 
 export default function Welcome() {
   return (
     <section aria-label="Accueil"
              className="relative w-screen h-screen overflow-hidden flex items-center justify-center">
-      
+
       <div className="-z-1">
         <WelcomeBlobsBackground/>
       </div>
@@ -32,6 +33,10 @@ export default function Welcome() {
         </div>
 
         <ContactMeAndSocials/>
+      </div>
+
+      <div className='absolute bottom-10 w-screen flex justify-center'>
+        <ScrollIndicator/>
       </div>
     </section>
   );
