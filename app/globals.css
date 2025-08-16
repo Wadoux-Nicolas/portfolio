@@ -6,11 +6,11 @@
 }
 
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-
     --font-sans: var(--font-itim);
     --font-mono: var(--font-roboto-mono);
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
 
     --color-primary-100: oklch(0.95 0.049 167.083);
     --color-primary-200: oklch(0.82 0.049 167.083);
@@ -44,6 +44,16 @@
     --color-tertiary-800: oklch(0.50 0.043 129.757);
     --color-tertiary-900: oklch(0.40 0.043 129.757);
     --color-tertiary: var(--color-tertiary-500);
+
+    /* breakpoints not included by default (as xs:class) */
+    --breakpoint-3xs: 16rem;
+    --breakpoint-2xs: 18rem;
+    --breakpoint-xs: 20rem;
+    --breakpoint-3xl: 48rem;
+    --breakpoint-4xl: 56rem;
+    --breakpoint-5xl: 64rem;
+    --breakpoint-6xl: 72rem;
+    --breakpoint-7xl: 80rem;
 }
 
 body {
