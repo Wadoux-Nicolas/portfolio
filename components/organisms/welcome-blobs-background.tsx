@@ -9,7 +9,7 @@ export default function WelcomeBlobsBackground() {
         alt=""
         width={426}
         height={1018}
-        className="absolute top-0 right-0 bottom-0 h-full w-1/3 object-cover object-left"
+        className="absolute top-0 right-0 bottom-0 h-full lg:w-1/3 w-1/5 object-cover object-left"
       />
 
       {/* Blobs on left */}
