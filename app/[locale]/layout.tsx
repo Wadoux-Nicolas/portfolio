@@ -4,7 +4,7 @@ import './globals.css';
 import React from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-import { Locale } from '@/i18n/routing';
+import { Locale, routing } from '@/i18n/routing';
 
 type RootLayoutPropsParam = {
   locale: Locale
@@ -40,6 +40,13 @@ export async function generateMetadata({params}: RootLayoutProps): Promise<Metad
     title: translate('title'),
     authors: [{name: 'Nicolas Wadoux'}],
     description: translate('description'),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: routing.locales.reduce((acc: Record<Locale, string>, locale: Locale): Record<Locale, string> => {
+        acc[locale] = `/${locale}`;
+        return acc;
+      }, {} as Record<Locale, string>),
+    },
   };
 }
 
