@@ -1,0 +1,20 @@
+{
+  "Meta": {
+    "title": "Portafolio | Nicolas Wadoux - Desarrollador Fullstack",
+    "description": "Portafolio de Nicolas Wadoux. Desarrollador fullstack, web y móvil. Especialista en Javascript, Typescript, Angular, PHP, Laravel, SQL."
+  },
+  "Navigation": {
+    "home": "Inicio"
+  },
+  "Actions": {
+    "contactMe": "Contáctame",
+    "downloadCv": "CV",
+    "seeGithub": "Ver mi Github",
+    "seeLinkedin": "Ver mi Linkedin",
+    "scrollDown": "Desplazar hacia abajo"
+  },
+  "Welcome": {
+    "job": "<developer>Desarrollador</developer> <web>Fullstack Web</web> <and>y</and> <mobile>Móvil</mobile>",
+    "greeting": "¡Hola! Soy"
+  }
+}
