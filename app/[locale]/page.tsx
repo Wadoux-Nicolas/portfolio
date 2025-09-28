@@ -1,6 +1,7 @@
 import Welcome from '@/components/templates/welcome';
+import React from 'react';
 
-export default function Home() {
+export default async function Home() {
   return (
     <main>
       <Welcome/>
