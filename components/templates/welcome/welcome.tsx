@@ -1,5 +1,5 @@
 import ContactMeAndSocials from '@/components/organisms/contact-me-and-socials/contact-me-and-socials';
-import WelcomeBlobsBackground from '@/components/organisms/welcome-blobs-background';
+import WelcomeBlobsBackground from '@/components/organisms/welcome-blobs-background/welcome-blobs-background';
 import ScrollIndicator from '@/components/atoms/scroll-indicator';
 import { useTranslations } from 'next-intl';
 

@@ -8,7 +8,7 @@ import frMessages from '@/messages/fr.json';
 vi.mock('@/components/organisms/contact-me-and-socials/contact-me-and-socials', () => ({
   default: () => <div data-testid="mock-contact-me-and-socials"/>,
 }));
-vi.mock('@/components/organisms/welcome-blobs-background', () => ({
+vi.mock('@/components/organisms/welcome-blobs-background/welcome-blobs-background', () => ({
   default: () => <div data-testid="mock-welcome-blobs-background"/>,
 }));
 vi.mock('@/components/atoms/scroll-indicator', () => ({
