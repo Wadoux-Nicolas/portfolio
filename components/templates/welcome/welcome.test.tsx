@@ -1,11 +1,11 @@
-import { beforeAll, describe, expect, test, vi } from 'vitest';
+import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest';
 import Welcome from '@/components/templates/welcome/welcome';
 import { render, screen } from '@testing-library/react';
 import { NextIntlClientProvider } from 'next-intl';
 import frMessages from '@/messages/fr.json';
 
 // Mock children components to isolate tests
-vi.mock('@/components/organisms/contact-me-and-socials', () => ({
+vi.mock('@/components/organisms/contact-me-and-socials/contact-me-and-socials', () => ({
   default: () => <div data-testid="mock-contact-me-and-socials"/>,
 }));
 vi.mock('@/components/organisms/welcome-blobs-background', () => ({
@@ -22,10 +22,15 @@ const renderWelcome = () =>
     </NextIntlClientProvider>,
   );
 
-describe('Welcome Component', () => {
+describe('Welcome Template', () => {
 
   beforeAll(() => {
     renderWelcome();
+  });
+
+  afterAll(() => {
+    vi.clearAllMocks();
+
   });
 
   test('Renders correctly and checks the main section attributes', () => {
