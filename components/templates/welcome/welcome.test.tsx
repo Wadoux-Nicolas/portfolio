@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, test, vi } from 'vitest';
-import Welcome from '@/components/templates/welcome';
+import Welcome from '@/components/templates/welcome/welcome';
 import { render, screen } from '@testing-library/react';
 import { NextIntlClientProvider } from 'next-intl';
 import frMessages from '@/messages/fr.json';
@@ -40,7 +40,7 @@ describe('Welcome Component', () => {
     expect(screen.getByTestId('mock-contact-me-and-socials')).toBeInTheDocument();
     expect(screen.getByTestId('mock-scroll-indicator')).toBeInTheDocument();
   });
-  
+
   test('Displays translated and structured text for the job title', () => {
     expect(screen.getByText(frMessages.Welcome.greeting)).toBeInTheDocument();
 
