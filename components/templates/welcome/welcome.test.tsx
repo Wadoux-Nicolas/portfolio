@@ -11,7 +11,7 @@ vi.mock('@/components/organisms/contact-me-and-socials/contact-me-and-socials', 
 vi.mock('@/components/organisms/welcome-blobs-background/welcome-blobs-background', () => ({
   default: () => <div data-testid="mock-welcome-blobs-background"/>,
 }));
-vi.mock('@/components/atoms/scroll-indicator', () => ({
+vi.mock('@/components/atoms/scroll-indicator/scroll-indicator', () => ({
   default: () => <div data-testid="mock-scroll-indicator"/>,
 }));
 
