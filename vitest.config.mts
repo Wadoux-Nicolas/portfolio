@@ -7,5 +7,18 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     setupFiles: ['./vitest.setup.ts'],
+    coverage: {
+      reporter: ['text', 'json-summary', 'json'],
+      reportOnFailure: true,
+      exclude: [
+        '**/dist/**',
+        '**/vitest.setup.ts',
+        '**/*.d.ts',
+        '**/.next/**',
+        '**/public/**',
+        '**/i18n/**',
+        '**/*.config.*',
+      ],
+    },
   },
 });
