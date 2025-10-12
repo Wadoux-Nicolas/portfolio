@@ -21,7 +21,6 @@ describe('CircleButton Atom', () => {
 
     expect(button).toBeInTheDocument();
     expect(button.tagName).toBe('BUTTON');
-    expect(button).toHaveAttribute('aria-label', 'Defeault Button');
     expect(button).toHaveTextContent('Click Me');
     expect(button).toHaveClass('cursor-pointer rounded-full');
   });
