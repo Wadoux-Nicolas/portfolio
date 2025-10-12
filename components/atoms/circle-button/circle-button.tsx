@@ -34,9 +34,9 @@ export default function CircleButton<ComponentType extends ElementType = default
     <Component
       {...props}
       className={clsx(
-        'rounded-full duration-200 cursor-pointer text-white truncate',
+        'rounded-full duration-200 cursor-pointer text-white truncate text-center',
         backgroundImage ? 'transition-all hover:brightness-90 filter' : 'transition-colors bg-secondary hover:bg-secondary-600',
-        size === 'sm' ? 'w-10 h-10 text-xl' : 'w-15 h-15 text-2xl',
+        size === 'sm' ? 'w-10 h-10 text-xl leading-10' : 'w-15 h-15 text-2xl leading-15',
         props.className,
       )}
       style={backgroundImage ? {
