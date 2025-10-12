@@ -1,5 +1,5 @@
-import FilledButton from '@/components/atoms/filled-button';
-import CircleButton from '@/components/atoms/circle-button';
+import FilledButton from '@/components/atoms/filled-button/filled-button';
+import CircleButton from '@/components/atoms/circle-button/circle-button';
 import { useTranslations } from 'next-intl';
 
 export default function ContactMeAndSocials() {

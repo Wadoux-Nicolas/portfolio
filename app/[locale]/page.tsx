@@ -1,4 +1,4 @@
-import Welcome from '@/components/templates/welcome';
+import Welcome from '@/components/templates/welcome/welcome';
 import React from 'react';
 
 export default async function Home() {
