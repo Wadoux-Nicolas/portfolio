@@ -9,6 +9,7 @@
   "Actions": {
     "contactMe": "Contact me",
     "downloadCv": "CV",
+    "curriculumVitae": "Curriculum Vitae",
     "seeGithub": "My Github",
     "seeLinkedin": "My Linkedin",
     "scrollDown": "Scroll down"
