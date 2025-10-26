@@ -4,6 +4,10 @@
     "description": "Portafolio de Nicolas Wadoux. Desarrollador fullstack, web y móvil. Especialista en Javascript, Typescript, Angular, PHP, Laravel, SQL."
   },
   "Navigation": {
+    "Slugs": {
+      "home": "inicio",
+      "about": "sobre-mi"
+    },
     "home": "Inicio",
     "about": "Sobre mí"
   },
