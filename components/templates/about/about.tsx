@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Title from '@/components/atoms/title/title';
+import LanguagesHobbiesTile from '@/components/organisms/languages-hobbies-tile/languages-hobbies-tile';
 
 export default function About() {
   const translate = useTranslations();
@@ -15,6 +16,8 @@ export default function About() {
       >
         {translate('Navigation.about')}
       </Title>
+
+      <LanguagesHobbiesTile/>
     </section>
   );
 }
