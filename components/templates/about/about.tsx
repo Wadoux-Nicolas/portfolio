@@ -8,7 +8,7 @@ export default function About() {
     <section
       id={translate('Navigation.Slugs.about')}
       aria-label={translate('Navigation.about')}
-      className="h-dvh flex p-8"
+      className="h-dvh p-8"
     >
       <Title
         as='h2'

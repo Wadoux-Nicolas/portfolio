@@ -29,7 +29,7 @@ export default function Title<T extends HeadingElement>({
   return (
     <Component
       className={clsx(
-        'text-primary relative h-fit px-8 py-1',
+        'text-primary relative h-fit w-fit px-8 py-1',
         sizeMap[Component] || sizeMap[defaultHeadingElement],
         props.className,
       )}
