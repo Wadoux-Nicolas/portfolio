@@ -19,8 +19,25 @@
     "seeLinkedin": "Voir mon Linkedin",
     "scrollDown": "Défiler vers le bas"
   },
+  "Languages": {
+    "french": "Français",
+    "english": "Anglais",
+    "spanish": "Espagnol"
+  },
   "Welcome": {
     "job": "<developer>Développeur</developer> <web>Fullstack Web</web> <and>et</and> <mobile>Mobile</mobile>",
     "greeting": "Bonjour ! Je suis"
+  },
+  "About": {
+    "spokenLanguages": "Langues parlées",
+    "frenchMotherTongue": "Langue maternelle",
+    "englishB2": "B2",
+    "englishToiec": "TOIEC 890",
+    "spanishB1+": "B1+",
+    "whatDrivesMe": "Ce qui me passionne",
+    "visitingAndTraveling": "Visiter et voyager",
+    "cookingAndBaking": "Cuisiner et pâtissier",
+    "playViolin": "Jouer du Violon",
+    "doingSports": "Sports"
   }
 }

@@ -19,8 +19,25 @@
     "seeLinkedin": "My Linkedin",
     "scrollDown": "Scroll down"
   },
+  "Languages": {
+    "french": "French",
+    "english": "English",
+    "spanish": "Spanish"
+  },
   "Welcome": {
     "job": "<web>Fullstack Web</web> <and>and</and> <mobile>Mobile</mobile> <developer>Developer</developer>",
     "greeting": "Hello ! I am"
+  },
+  "About": {
+    "spokenLanguages": "Spoken languages",
+    "frenchMotherTongue": "Mother tongue",
+    "englishB2": "B2",
+    "englishToiec": "TOIEC 890",
+    "spanishB1+": "B1+",
+    "whatDrivesMe": "What drives me",
+    "visitingAndTraveling": "Visiting and traveling",
+    "cookingAndBaking": "Cooking and baking",
+    "playViolin": "Play violin",
+    "doingSports": "Doing sports"
   }
 }
