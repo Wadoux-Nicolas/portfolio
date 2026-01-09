@@ -38,6 +38,27 @@
     "visitingAndTraveling": "Visiter et voyager",
     "cookingAndBaking": "Cuisiner et pâtissier",
     "playViolin": "Jouer du Violon",
-    "doingSports": "Sports"
+    "doingSports": "Sports",
+    "stats": {
+      "age": {
+        "unit": "ans",
+        "label": "Sur terre"
+      },
+      "projects": {
+        "unit": "projets",
+        "label": "réalisés avec passion"
+      },
+      "experience": {
+        "unit": "années",
+        "label": "d’expériences professionnelles"
+      }
+    },
+    "presentation": {
+      "hello": "Bonjour et bienvenue sur mon portfolio ! <Strong>Développeur Fullstack</Strong>, j’aime participer à des <Strong>projets porteurs de sens.</Strong>",
+      "why": "Pourquoi ce métier ? Parce que <Strong>j’aime comprendre et construire</Strong> dans un but précis. Quel sera l’<Strong>impact positif</Strong> de ce projet ? Pour moi, le développement web ne se résume pas à <Strong>développer des fonctionnalités</Strong>, mais à créer des <Strong>outils éthiques, performants, durables et utiles</Strong>.",
+      "team": "Adepte de l’<Strong>esprit d’équipe</Strong>, je m’épanouis dans l’échange. J’aime autant <Strong>apprendre de mes pairs</Strong> que <Strong>transmettre mes connaissances</Strong> pour atteindre notre but <Strong>ensemble</Strong>.",
+      "location": "Actuellement basé sur la frontière genevoise, je travaille avec plaisir sur les <Strong>secteurs de Genève, Annecy, et même Paris</Strong> ! Curieux de nature et grand voyageur dans l’âme, je suis également <Strong>ouvert à des opportunités</Strong> à l’international !",
+      "contact": "Que vous soyez ici pour un recrutement, pour discuter d’un projet innovant ou simplement pour échanger ou dire bonjour, n’hésitez pas à me contacter !"
+    }
   }
 }

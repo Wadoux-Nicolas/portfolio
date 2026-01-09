@@ -38,6 +38,27 @@
     "visitingAndTraveling": "Visiting and traveling",
     "cookingAndBaking": "Cooking and baking",
     "playViolin": "Play violin",
-    "doingSports": "Doing sports"
+    "doingSports": "Doing sports",
+    "stats": {
+      "age": {
+        "unit": "years",
+        "label": "on Earth"
+      },
+      "projects": {
+        "unit": "projects",
+        "label": "crafted with passion"
+      },
+      "experience": {
+        "unit": "years",
+        "label": "of professional experience"
+      }
+    },
+    "presentation": {
+      "hello": "Hello and welcome to my portfolio! As a <Strong>Fullstack Developer</Strong>, I thrive on contributing to <Strong>meaningful projects.</Strong>",
+      "why": "Why this career? Because <Strong>I love to understand and build</Strong> with a clear purpose. What will be the <Strong>positive impact</Strong> of this project? To me, web development isn't just about <Strong>building features</Strong>, it's about creating <Strong>ethical, high-performance, sustainable, and useful tools</Strong>.",
+      "team": "A firm believer in <Strong>team spirit</Strong>, I love working on collaboration. I enjoy <Strong>learning from my peers</Strong> as much as <Strong>sharing my knowledge</Strong> to reach our goals <Strong>together</Strong>.",
+      "location": "Currently based on the Geneva border, I’m happy to work in the <Strong>Geneva, Annecy, or Paris areas</Strong>! Naturally curious and a traveler at heart, I am also <Strong>open to international opportunities</Strong>!",
+      "contact": "Whether you're here for recruitment, to discuss an innovative project, simply to exchange ideas or say hello, feel free to contact me!"
+    }
   }
 }
