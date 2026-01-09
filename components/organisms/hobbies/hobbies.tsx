@@ -6,9 +6,9 @@ export default function Hobbies() {
 
   return (
     <section className="w-fit">
-      <p className='text-center mb-2 text-secondary'>
+      <h3 className='text-center mb-2 text-secondary'>
         {translate('About.whatDrivesMe')}
-      </p>
+      </h3>
       <ul className='flex gap-x-8 gap-y-4 flex-wrap sm:flex-nowrap justify-center'>
         <li>
           <Hobby

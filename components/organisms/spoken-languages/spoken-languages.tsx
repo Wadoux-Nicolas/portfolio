@@ -6,9 +6,9 @@ export default function SpokenLanguages() {
 
   return (
     <section className="w-fit">
-      <p className='text-center mb-2 text-secondary'>
+      <h3 className='text-center mb-2 text-secondary'>
         {translate('About.spokenLanguages')}
-      </p>
+      </h3>
       <ul className='flex flex-wrap sm:flex-nowrap justify-center gap-8 md:gap-16'>
         <li>
           <SpokenLanguageFlag alt={translate('Languages.french')} flag={'fr'}>
