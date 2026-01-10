@@ -6,10 +6,12 @@
   "Navigation": {
     "Slugs": {
       "home": "inicio",
-      "about": "sobre-mi"
+      "about": "sobre-mi",
+      "skills": "competencias"
     },
     "home": "Inicio",
-    "about": "Sobre mí"
+    "about": "Sobre mí",
+    "skills": "Competencias"
   },
   "Actions": {
     "contactMe": "Contáctame",

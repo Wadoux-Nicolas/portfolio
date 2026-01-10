@@ -6,10 +6,12 @@
   "Navigation": {
     "Slugs": {
       "home": "home",
-      "about": "about"
+      "about": "about",
+      "skills": "skills"
     },
     "home": "Home",
-    "about": "About"
+    "about": "About",
+    "skills": "Skills"
   },
   "Actions": {
     "contactMe": "Contact me",
