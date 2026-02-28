@@ -1,57 +1,61 @@
 import FilledButton from '@/components/atoms/filled-button/filled-button';
 import CircleButton from '@/components/atoms/circle-button/circle-button';
-import { useLocale, useTranslations } from 'next-intl';
 
-export default function ContactMeAndSocials() {
-  const translate = useTranslations('Actions');
-  const locale = useLocale();
+export interface ContactMeAndSocialsProps {
+  contactMeLabel: string;
+  downloadCvLabel: string;
+  cvFileUrl: string;
+  cvFileLang: string;
+  githubUrl: string;
+  linkedinUrl: string;
+  contactMeAriaLabel: string;
+  cvAriaLabel: string;
+  githubAriaLabel: string;
+  linkedinAriaLabel: string;
+}
 
-  const getFileByLocale = (locale: string) => {
-    const $path = '/cv/';
-    switch (locale) {
-      case 'fr':
-        return `${$path}CV - Nicolas Wadoux - FR.pdf`;
-      case 'es':
-        return `${$path}CV - Nicolas Wadoux - ES.pdf`;
-      case 'en':
-      default:
-        return `${$path}CV - Nicolas Wadoux - EN.pdf`;
-    }
-  };
-
-  // get cv file by locale
-  const cvFile = getFileByLocale(locale);
-
+export default function ContactMeAndSocials({
+  contactMeLabel,
+  downloadCvLabel,
+  cvFileUrl,
+  cvFileLang,
+  githubUrl,
+  linkedinUrl,
+  contactMeAriaLabel,
+  cvAriaLabel,
+  githubAriaLabel,
+  linkedinAriaLabel,
+}: ContactMeAndSocialsProps) {
   const flexContainerCommonClass = 'flex flex-row 4xl:flex-col flex-wrap items-center justify-center gap-4';
 
   return (
     <div className={flexContainerCommonClass}>
-      <FilledButton rounded className="max-xs:w-full">{translate('contactMe')}</FilledButton>
+      <FilledButton rounded className="max-xs:w-full" aria-label={contactMeAriaLabel}>{contactMeLabel}</FilledButton>
 
       <div className={flexContainerCommonClass}>
         <CircleButton
           as='a'
-          aria-label={translate('curriculumVitae')}
-          href={cvFile}
-          hrefLang={locale}
+          aria-label={cvAriaLabel}
+          href={cvFileUrl}
+          hrefLang={cvFileLang}
           target='_blank'
           rel='noopener'
-        >{translate('downloadCv')}</CircleButton>
+        >{downloadCvLabel}</CircleButton>
         <CircleButton
           as='a'
-          href='https://github.com/Wadoux-Nicolas?tab=repositories'
+          href={githubUrl}
           target='_blank'
           rel='noopener'
           backgroundImage='/logos/github.svg'
-          aria-label={translate('seeGithub')}
+          aria-label={githubAriaLabel}
         />
         <CircleButton
           as='a'
-          href='https://www.linkedin.com/in/nicolas-wadoux-5b8271193'
+          href={linkedinUrl}
           target='_blank'
           rel='noopener'
           backgroundImage='/logos/linkedin.svg'
-          aria-label={translate('seeLinkedin')}
+          aria-label={linkedinAriaLabel}
         />
       </div>
     </div>
