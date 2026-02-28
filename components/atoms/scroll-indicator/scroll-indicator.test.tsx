@@ -17,21 +17,20 @@ describe('ScrollIndicator Atom', () => {
   });
 
   test('Renders a button with correct accessibility label and type', () => {
-    const button = screen.getByRole('button', {name: frMessages.Actions.scrollDown});
+    const button = screen.getByRole('link', {name: frMessages.Actions.scrollDown});
 
     expect(button).toBeInTheDocument();
-    expect(button).toHaveAttribute('type', 'button');
     expect(button).toHaveAttribute('aria-label', frMessages.Actions.scrollDown);
   });
 
   test('Renders the inner animated indicator element', () => {
-    const innerDiv = document.querySelector('button div.animate-bounce');
+    const innerDiv = document.querySelector('a div.animate-bounce');
 
     expect(innerDiv).toBeInTheDocument();
   });
 
-  test('Button has cursor and pointer style classes', () => {
-    const button = screen.getByRole('button');
+  test('Link has cursor and pointer style classes', () => {
+    const button = screen.getByRole('link');
 
     expect(button).toHaveClass('cursor-pointer');
   });
