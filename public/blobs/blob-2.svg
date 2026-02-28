@@ -1,3 +1,5 @@
 <svg width="1440" height="131" viewBox="0 0 1440 131" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path id="Rectangle" fill-rule="evenodd" clip-rule="evenodd" d="M0 48.2746C0 48.2746 48.0137 94.4921 201.23 94.4921C475 65.5002 610 0.500183 716 0.500183C858.5 0.500183 967.552 94.3486 1073 109C1208.55 130.857 1442 77.5511 1442 77.5511V131H0V48.2746Z" fill="white"/>
+    <path id="Rectangle" fill-rule="evenodd" clip-rule="evenodd"
+          d="M0 48.2746C0 48.2746 48.0137 94.4921 201.23 94.4921C475 65.5002 610 0.500183 716 0.500183C858.5 0.500183 967.552 94.3486 1073 109C1208.55 130.857 1442 77.5511 1442 77.5511V131H0V48.2746Z"
+          fill="#fefefe"/>
 </svg>

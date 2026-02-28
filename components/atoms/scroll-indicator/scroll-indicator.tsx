@@ -1,13 +1,17 @@
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export default function ScrollIndicator() {
-  const translate = useTranslations('Actions');
+  const translate = useTranslations();
 
   return (
-    <button type="button" aria-label={translate('scrollDown')}
-            className="cursor-pointer sm:border-4 border-2 border-primary rounded-full sm:w-8 w-4 sm:h-16 h-8 flex items-end justify-center">
+    <Link
+      aria-label={translate('Actions.scrollDown')}
+      href={'#' + translate('Navigation.Slugs.about')}
+      className="transition-opacity hover:opacity-80 cursor-pointer sm:border-4 border-2 border-primary rounded-full sm:w-8 w-4 sm:h-16 h-8 flex items-end justify-center"
+    >
       <div
         className="sm:border-4 border-2 border-secondary rounded-full sm:w-3 w-1.5 sm:h-6 h-3 sm:mb-1 mb-0.5 animate-bounce"></div>
-    </button>
+    </Link>
   );
 }

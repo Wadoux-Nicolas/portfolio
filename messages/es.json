@@ -4,7 +4,12 @@
     "description": "Portafolio de Nicolas Wadoux. Desarrollador fullstack, web y móvil. Especialista en Javascript, Typescript, Angular, PHP, Laravel, SQL."
   },
   "Navigation": {
-    "home": "Inicio"
+    "Slugs": {
+      "home": "inicio",
+      "about": "sobre-mi"
+    },
+    "home": "Inicio",
+    "about": "Sobre mí"
   },
   "Actions": {
     "contactMe": "Contáctame",
@@ -14,8 +19,46 @@
     "seeLinkedin": "Ver mi Linkedin",
     "scrollDown": "Desplazar hacia abajo"
   },
+  "Languages": {
+    "french": "Francés",
+    "english": "Inglés",
+    "spanish": "Español"
+  },
   "Welcome": {
     "job": "<developer>Desarrollador</developer> <web>Fullstack Web</web> <and>y</and> <mobile>Móvil</mobile>",
     "greeting": "¡Hola! Soy"
+  },
+  "About": {
+    "spokenLanguages": "Idiómas",
+    "frenchMotherTongue": "Langua nativa",
+    "englishB2": "B2",
+    "englishToiec": "TOIEC 890",
+    "spanishB1+": "B1+",
+    "whatDrivesMe": "Lo que me mueve",
+    "visitingAndTraveling": "Visitar y viajar",
+    "cookingAndBaking": "Cocinar y la repostería",
+    "playViolin": "Tocar violín",
+    "doingSports": "Desportes",
+    "stats": {
+      "age": {
+        "unit": "años",
+        "label": "en la tierra"
+      },
+      "projects": {
+        "unit": "proyectos",
+        "label": "creados con pasión"
+      },
+      "experience": {
+        "unit": "años",
+        "label": "de experiencia profesional"
+      }
+    },
+    "presentation": {
+      "hello": "¡Hola y bienvenido a mi portafolio! Como <Strong>Desarrollador Fullstack</Strong>, me apasiona participar en <Strong>proyectos con propósito.</Strong>",
+      "why": "¿Por qué esta profesión? Porque <Strong>me encanta comprender y construir</Strong> con un objetivo claro. ¿Cuál será el <Strong>impacto positivo</Strong> de este proyecto? Para mí, el desarrollo web no se resume a <Strong>programar funcionalidades</Strong>, sino a crear <Strong>proyectos éticos, eficientes, sostenibles y útiles</Strong>.",
+      "team": "Firme defensor del <Strong>espíritu de equipo</Strong>, disfruto de la colaboración. Me gusta tanto <Strong>aprender de mis compañeros</Strong> como <Strong>compartir mis conocimientos</Strong> para alcanzar nuestros objetivos <Strong>juntos</Strong>.",
+      "location": "Actualmente resido en la frontera con Ginebra y trabajo con gusto en las <Strong>zonas de Ginebra, Annecy y París</Strong>. Curioso por naturaleza y viajero de corazón, ¡también estoy <Strong>abierto a oportunidades</Strong> internacionales!",
+      "contact": "Ya sea por un proceso de selección, para hablar de un proyecto innovador o simplemente para intercambiar ideas o decir hola, ¡no dudes en contactarme!"
+    }
   }
 }
