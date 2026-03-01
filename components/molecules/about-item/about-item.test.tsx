@@ -1,12 +1,12 @@
 import { afterEach, describe, expect, test } from 'vitest';
 import { cleanup, render, screen } from '@testing-library/react';
-import AboutItem from './about-item';
+import AboutItem, { AboutItemProps } from './about-item';
 
 describe('AboutItem Molecule', () => {
-  const defaultProps = {
+  const defaultProps: AboutItemProps = {
     value: 5,
     unit: 'years',
-    description: 'Experiences',
+    label: 'Experiences',
   };
 
   afterEach(() => {

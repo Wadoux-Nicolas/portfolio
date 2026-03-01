@@ -1,24 +1,26 @@
-import { describe, expect, test, afterEach } from 'vitest';
+import { afterEach, describe, expect, test } from 'vitest';
 import { cleanup, render, screen } from '@testing-library/react';
-import AboutItems from './about-items';
+import AboutItems, { AboutItemsProps } from './about-items';
 
 describe('AboutItems Organism', () => {
-  const defaultProps = {
-    age: {
-      value: 24,
-      unit: 'ans',
-      label: 'Sur terre',
-    },
-    projects: {
-      value: 18,
-      unit: 'projets',
-      label: 'réalisés avec passion',
-    },
-    experience: {
-      value: 4,
-      unit: 'années',
-      label: "d'expériences professionnelles",
-    },
+  const defaultProps: AboutItemsProps = {
+    items: [
+      {
+        value: 24,
+        unit: 'ans',
+        label: 'Sur terre',
+      },
+      {
+        value: 18,
+        unit: 'projets',
+        label: 'réalisés avec passion',
+      },
+      {
+        value: 4,
+        unit: 'années',
+        label: "d'expériences professionnelles",
+      },
+    ],
   };
 
   const renderAboutItems = (props = defaultProps) =>
