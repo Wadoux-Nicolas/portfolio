@@ -1,7 +1,7 @@
 import React from 'react';
 import { Locale } from 'use-intl';
 import Welcome from '@/components/pages/welcome';
-import About from '@/components/templates/about/about';
+import About from '@/components/pages/about';
 
 export default async function Home({
   params,

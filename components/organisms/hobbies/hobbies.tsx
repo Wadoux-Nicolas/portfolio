@@ -1,43 +1,33 @@
-import { useTranslations } from 'next-intl';
+import type { HobbyIcon } from '@/components/molecules/hobby/hobby';
 import Hobby from '@/components/molecules/hobby/hobby';
 
-export default function Hobbies() {
-  const translate = useTranslations();
+export interface HobbyItem {
+  icon: HobbyIcon;
+  label: string;
+}
 
+export interface HobbiesProps {
+  sectionTitle: string;
+  hobbies: HobbyItem[];
+}
+
+export default function Hobbies({
+  sectionTitle,
+  hobbies,
+}: HobbiesProps) {
   return (
     <section className="w-fit">
       <h3 className='text-center mb-2 text-secondary'>
-        {translate('About.whatDrivesMe')}
+        {sectionTitle}
       </h3>
       <ul className='flex gap-x-8 gap-y-4 flex-wrap sm:flex-nowrap justify-center'>
-        <li>
-          <Hobby
-            icon={'palm-tree'}
-          >
-            {translate('About.visitingAndTraveling')}
-          </Hobby>
-        </li>
-        <li>
-          <Hobby
-            icon={'violin'}
-          >
-            {translate('About.playViolin')}
-          </Hobby>
-        </li>
-        <li>
-          <Hobby
-            icon={'cook'}
-          >
-            {translate('About.cookingAndBaking')}
-          </Hobby>
-        </li>
-        <li>
-          <Hobby
-            icon={'badminton'}
-          >
-            {translate('About.doingSports')}
-          </Hobby>
-        </li>
+        {hobbies.map((hobby) => (
+          <li key={hobby.label}>
+            <Hobby icon={hobby.icon}>
+              {hobby.label}
+            </Hobby>
+          </li>
+        ))}
       </ul>
     </section>
   );

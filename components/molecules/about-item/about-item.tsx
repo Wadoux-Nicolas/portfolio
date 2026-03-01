@@ -4,13 +4,13 @@ import clsx from 'clsx';
 export type AboutItemProps = {
   value: number | string;
   unit: string;
-  description: string;
+  label: string;
 } & PropsWithChildren<ComponentPropsWithoutRef<'div'>>;
 
 export default function AboutItem({
   value,
   unit,
-  description,
+  label,
   className,
   ...props
 }: AboutItemProps) {
@@ -24,7 +24,7 @@ export default function AboutItem({
       >
         {value} <span className="text-primary">{unit}</span>
       </span>
-      {description}
+      {label}
     </strong>
   );
 };

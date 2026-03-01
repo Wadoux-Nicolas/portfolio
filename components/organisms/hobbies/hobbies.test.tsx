@@ -1,56 +1,63 @@
 import { afterEach, describe, expect, test } from 'vitest';
 import { cleanup, render, screen } from '@testing-library/react';
-import { NextIntlClientProvider } from 'next-intl';
 import Hobbies from './hobbies';
-import enMessages from '@/messages/en.json';
 
 describe('Hobbies Component', () => {
+  const defaultProps = {
+    sectionTitle: 'What drives me',
+    hobbies: [
+      {
+        icon: 'palm-tree' as const,
+        label: 'Visiting and traveling',
+      },
+      {
+        icon: 'violin' as const,
+        label: 'Play violin',
+      },
+      {
+        icon: 'cook' as const,
+        label: 'Cooking and baking',
+      },
+      {
+        icon: 'badminton' as const,
+        label: 'Doing sports',
+      },
+    ],
+  };
+
+  const renderHobbies = (props = defaultProps) =>
+    render(<Hobbies {...props} />);
+
   afterEach(() => {
     cleanup();
   });
 
   test('renders the section title correctly', () => {
-    render(
-      <NextIntlClientProvider locale="en" messages={enMessages}>
-        <Hobbies/>
-      </NextIntlClientProvider>,
-    );
+    renderHobbies();
 
-    const title = screen.getByText(enMessages.About.whatDrivesMe);
+    const title = screen.getByText('What drives me');
     expect(title).toBeInTheDocument();
     expect(title).toHaveClass('text-secondary text-center');
   });
 
   test('renders the correct number of hobby items', () => {
-    render(
-      <NextIntlClientProvider locale="en" messages={enMessages}>
-        <Hobbies/>
-      </NextIntlClientProvider>,
-    );
+    renderHobbies();
 
     const listItems = screen.getAllByRole('listitem');
     expect(listItems).toHaveLength(4);
   });
 
   test('renders all specific hobby texts', () => {
-    render(
-      <NextIntlClientProvider locale="en" messages={enMessages}>
-        <Hobbies/>
-      </NextIntlClientProvider>,
-    );
+    renderHobbies();
 
-    expect(screen.getByText(enMessages.About.visitingAndTraveling)).toBeInTheDocument();
-    expect(screen.getByText(enMessages.About.playViolin)).toBeInTheDocument();
-    expect(screen.getByText(enMessages.About.cookingAndBaking)).toBeInTheDocument();
-    expect(screen.getByText(enMessages.About.doingSports)).toBeInTheDocument();
+    expect(screen.getByText('Visiting and traveling')).toBeInTheDocument();
+    expect(screen.getByText('Play violin')).toBeInTheDocument();
+    expect(screen.getByText('Cooking and baking')).toBeInTheDocument();
+    expect(screen.getByText('Doing sports')).toBeInTheDocument();
   });
 
   test('applies responsive flex classes to the list container', () => {
-    render(
-      <NextIntlClientProvider locale="en" messages={enMessages}>
-        <Hobbies/>
-      </NextIntlClientProvider>,
-    );
+    renderHobbies();
 
     const list = screen.getByRole('list');
     expect(list).toHaveClass('flex gap-x-8 gap-y-4 flex-wrap sm:flex-nowrap justify-center');

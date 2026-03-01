@@ -59,6 +59,6 @@ describe('Welcome Template', () => {
 
     const h1Element = screen.getByRole('heading', {level: 1});
     expect(h1Element).toBeInTheDocument();
-    expect(h1Element).toHaveTextContent('Nicolas Wadoux, Fullstack WebandMobileDeveloper');
+    expect(h1Element).toHaveTextContent('Nicolas Wadoux, Fullstack Web Developer');
   });
 });

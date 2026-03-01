@@ -1,46 +1,51 @@
-import { useTranslations } from 'next-intl';
 import Title from '@/components/atoms/title/title';
 import LanguagesHobbiesTile from '@/components/organisms/languages-hobbies-tile/languages-hobbies-tile';
+import type { AboutItemsProps } from '@/components/organisms/about-items/about-items';
 import AboutItems from '@/components/organisms/about-items/about-items';
-import Strong from '@/components/atoms/strong/strong';
+import type { SpokenLanguagesProps } from '@/components/organisms/spoken-languages/spoken-languages';
+import type { HobbiesProps } from '@/components/organisms/hobbies/hobbies';
+import { ReactNode } from 'react';
 
-export default function About() {
-  const translate = useTranslations();
+export interface AboutProps {
+  sectionId: string;
+  sectionAriaLabel: string;
+  title: string;
+  stats: AboutItemsProps;
+  presentations: ReactNode[];
+  languagesHobbies: {
+    spokenLanguages: SpokenLanguagesProps;
+    hobbies: HobbiesProps;
+  };
+}
 
+export default function About({
+  sectionId,
+  sectionAriaLabel,
+  title,
+  stats,
+  presentations,
+  languagesHobbies,
+}: AboutProps) {
   return (
     <section
-      id={translate('Navigation.Slugs.about')}
-      aria-label={translate('Navigation.about')}
+      id={sectionId}
+      aria-label={sectionAriaLabel}
       className="min-h-dvh p-4 md:p-8 gap-8 md:gap-16 flex flex-col max-w-7xl mx-auto"
     >
-      <Title
-        as='h2'
-      >
-        {translate('Navigation.about')}
+      <Title as='h2'>
+        {title}
       </Title>
 
-      <AboutItems/>
+      <AboutItems {...stats} />
 
       <div className="flex flex-col gap-1 text-md md:text-lg">
-        <p>
-          {translate.rich('About.presentation.hello', {Strong: (children) => <Strong>{children}</Strong>})}
-        </p>
-        <p>
-          {translate.rich('About.presentation.why', {Strong: (children) => <Strong>{children}</Strong>})}
-        </p>
-        <p>
-          {translate.rich('About.presentation.team', {Strong: (children) => <Strong>{children}</Strong>})}
-        </p>
-        <p>
-          {translate.rich('About.presentation.location', {Strong: (children) => <Strong>{children}</Strong>})}
-        </p>
-        <p>
-          {translate.rich('About.presentation.contact', {Strong: (children) => <Strong>{children}</Strong>})}
-        </p>
-
+        {presentations.map((presentation, index) => <p key={index}>{presentation}</p>)}
       </div>
 
-      <LanguagesHobbiesTile/>
+      <LanguagesHobbiesTile
+        spokenLanguages={languagesHobbies.spokenLanguages}
+        hobbies={languagesHobbies.hobbies}
+      />
     </section>
   );
 }
